@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class SquareRootCalculate {
+    public static void main(String[] args) {
+
+        double number;
+        double squareRoot;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("CALCULATE SQUARE ROOT\n");
+
+        System.out.print("Enter your a number :");
+        number = scanner.nextInt();
+
+        squareRoot = Math.sqrt(number);
+        System.out.printf("The SquareRoot of "+number+" is %.2f",squareRoot);
+
+
+    }
+    }

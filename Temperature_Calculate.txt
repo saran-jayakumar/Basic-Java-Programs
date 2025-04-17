@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class TemperatureCaluclate{
+    public static void main(String[] args){
+
+    double temperature;
+    double newTemperature;
+    String unit;
+
+	//Temperature Calculate using Ternary Operator
+
+    Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the temperature:");
+        temperature = scanner.nextDouble();
+        System.out.print("Covert into Celsius or Fahrenheit (C or F): ");
+        unit = scanner.next().toUpperCase();
+        newTemperature = (unit.equals("C")) ? (temperature - 32) * 5 / 9 : (temperature * 5 / 9) + 32;
+        System.out.printf("%.1f °%s",newTemperature,unit);
+        
+        scanner.close();
+    }
+    }

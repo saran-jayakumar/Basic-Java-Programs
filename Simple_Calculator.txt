@@ -1,0 +1,53 @@
+import java.util.Scanner;
+public class SimpleCalulator{
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+        double num1;
+        double num2;
+        char operator;
+        double value;
+
+        System.out.println("Enter a first number: ");
+        num1 = scanner.nextDouble();
+
+
+
+        System.out.println("Choose Operator ( + , - , * , / , % , ^)");
+        operator = scanner.next().charAt(0);
+
+        System.out.println("Enter a second number: ");
+        num2 = scanner.nextDouble();
+
+        switch (operator) {
+                case '+':
+                    value = num1 + num2;
+                    System.out.println(value);
+                    break;
+                case '-':
+                    value = num1 - num2;
+                    System.out.println(value);
+                    break;
+                case '*':
+                    value = num1 * num2;
+                    System.out.println(value);
+                    break;
+                case '/':
+                    value = num1 / num2;
+                    System.out.println(value);
+                    break;
+                case '%':
+                    value = num1 % num2;
+                    System.out.println(value);
+                    break;
+                case '^':
+                    value = Math.pow(num1,num2);
+                    System.out.println(value);
+                    break;
+
+                default:
+                System.out.println("Please enter valid operator");
+            }
+		scanner.close();
+        }
+    }

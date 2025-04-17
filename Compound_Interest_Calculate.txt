@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class CompoundInterest {
+    public static void main(String[] args) {
+
+        int principalAmount;
+        double rateOfInterest;
+        double totalAmount;
+        int year;
+        double compoundInterest;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your Principal amount: ");
+        principalAmount = scanner.nextInt();
+
+        System.out.print("Enter your Interest rate: ");
+        rateOfInterest = scanner.nextDouble();
+
+
+        System.out.print("Enter number of year: ");
+        year = scanner.nextInt();
+
+        //CompoundInterest CI = PrincipalAmount(1+R/100)N.
+        totalAmount = principalAmount * Math.pow(1+rateOfInterest/100,year);
+
+        System.out.printf("\nThe amount after %d years is %.2f/- \n",year,totalAmount);
+
+        compoundInterest = totalAmount-principalAmount;
+        System.out.printf("Compound Amount is %.2f/- ",compoundInterest);
+
+        scanner.close();
+    }
+    }

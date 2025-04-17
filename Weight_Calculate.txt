@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class WeightCalulate{
+    public static void main(String args[]){
+
+        double weight = 0;
+        double newWeight;
+        int choice;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("__________Weight Converter__________");
+        System.out.println("1.Kilogram to Pounds");
+        System.out.println("2.Pounds to Kilogram");
+        
+        System.out.println("Choose Option :");
+        choice = scanner.nextInt();
+
+        if(choice == 1){
+            System.out.print("Enter your weight in Kilogram : ");
+            weight = scanner.nextDouble();
+            newWeight = weight * 2.2;
+            System.out.printf("Your %.2f Kilogram.",newWeight);
+        }else if(choice == 2){
+            System.out.print("Enter your weight in Pounds: ");
+            weight = scanner.nextDouble();
+            newWeight = weight * 0.453592;
+            System.out.printf("Your %.2f Pounds.",newWeight);
+        }else{
+            System.out.println("Choose Valid Option");
+        }
+        scanner.close();
+    }
+    }
